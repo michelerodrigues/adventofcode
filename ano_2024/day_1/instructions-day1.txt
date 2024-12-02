@@ -1,5 +1,5 @@
 --- Day 1: Historian Hysteria ---
-The Chief Historian is always present for the big Christmas sleigh launch, but nobody has seen him in months! 
+The Chief Historian (hitoriador chefe) is always present for the big Christmas  (lançamento de trenó), but nobody has seen him in months! 
 Last anyone heard, he was visiting locations that are historically significant to the North Pole; 
 a group of Senior Historians has asked you to accompany them as they check the places they think he was most likely to visit.
 
@@ -12,7 +12,7 @@ Two puzzles will be made available on each day in the Advent calendar;
 the second puzzle is unlocked when you complete the first. 
 Each puzzle grants one star. Good luck!
 
-You haven't even left yet and the group of Elvish Senior Historians has already hit a problem: 
+You haven't even left yet and the group of Elvish Senior Historians (Historiadores Élficos Seniores) has already hit a problem: 
 their list of locations to check is currently empty. 
 Eventually, someone decides that the best place to check first would be the Chief Historian's office.
 
