@@ -3,7 +3,7 @@ from day_1.day1 import *
 
 @pytest.fixture
 def test_file():
-    test_file = "/Users/micheledasilvarodrigues/repositorios/michele/adventofcode/ano_2024/day_1/tests/input_test_day1.txt"
+    test_file = os.path.abspath('day_1/tests/input_test_day1.txt')
     return test_file
 
 
@@ -48,7 +48,7 @@ def test_file_not_found():
 
 
 def test_invalid_file():
-    test_file = "/Users/micheledasilvarodrigues/repositorios/michele/adventofcode/ano_2024/day_1/day1.py"
+    test_file = os.path.abspath('day_1/day1.py')
     col1, col2 = load_file(test_file)
 
     assert col1 == []

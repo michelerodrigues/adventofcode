@@ -1,3 +1,4 @@
+import os
 
 def load_file(file_path):
     # definir duas listas vazias onde serão inseridos os location_id de cada coluna do arquivo
@@ -63,7 +64,8 @@ def sum_distances(distances):
 
 
 def main():
-    file_path = "/Users/micheledasilvarodrigues/repositorios/michele/adventofcode/ano_2024/day_1/input-day1.txt"
+    file_path = os.path.abspath('day_1/input-day1.txt')
+
     if not file_path:
         print("File path empty or None.")
         return
