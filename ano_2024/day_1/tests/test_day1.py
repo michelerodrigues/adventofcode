@@ -21,6 +21,18 @@ def location_id_2():
 def distances():
     return [2,1,0,1,2,5]
 
+
+@pytest.fixture
+def appearance():
+    return [3,1,0,0,3,3]
+
+
+@pytest.fixture
+def similarity():
+    return [9,4,0,0,9,9]
+
+
+
 def test_load_file(test_file):
     col1 = []
     col2 = []
@@ -73,3 +85,18 @@ def test_calculate_distance_apart(location_id_1, location_id_2):
 def test_sum_distances(distances):
     final_result = sum_distances(distances)
     assert final_result == 11
+
+
+def test_location_appearance(location_id_1, location_id_2):
+    appearance = define_appearance_at_left_list(location_id_1, location_id_2)
+    assert appearance == [3,1,0,0,3,3]
+
+
+def test_calculate_similarity(location_id_1, appearance):
+    similarity = calculate_similarity(location_id_1, appearance)
+    assert similarity == [9,4,0,0,9,9]
+
+
+def test_calculate_score(similarity):
+    score = calculate_score(similarity)
+    assert score == 31

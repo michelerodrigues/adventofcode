@@ -15,7 +15,7 @@ def load_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as location_file:
             for line in location_file:
-                print(f"Line: {repr(line)}")
+                # print(f"Line: {repr(line)}")
                 col = line.strip().split()
                  
                 if(len(col) == 2):
@@ -63,6 +63,36 @@ def sum_distances(distances):
     return sum_distances
 
 
+def define_appearance_at_left_list(loc1, loc2):
+    appearance = []
+
+    for loc in loc1:
+        count = 0
+        for x in loc2:
+            if(loc == x):
+                count = count +1
+        appearance.append(count)
+    
+    return appearance
+
+
+def calculate_similarity(locations_1, appearance):
+    similarity = []
+
+    for index, num in enumerate(locations_1):
+        sim = num * appearance[index]
+        similarity.append(sim)
+
+    return similarity
+
+
+def calculate_score(similarity):
+    score = 0
+    for x in similarity:
+        score = score + x
+    return score
+
+
 def main():
     file_path = os.path.abspath('day_1/input-day1.txt')
 
@@ -76,6 +106,12 @@ def main():
     final_result = sum_distances(distances)
 
     print("The total distance between the lists is ", final_result)
+
+    appearance = define_appearance_at_left_list(locations_1, locations_2)
+    similarity = calculate_similarity(locations_1, appearance)
+    score = calculate_score(similarity)
+
+    print("Their similarity score is ", score) 
 
 
 if __name__ == "__main__":
