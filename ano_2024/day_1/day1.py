@@ -96,10 +96,6 @@ def calculate_score(similarity):
 def main():
     file_path = os.path.abspath('day_1/input-day1.txt')
 
-    if not file_path:
-        print("File path empty or None.")
-        return
-    
     locations_1, locations_2 = load_file(file_path)
     locations_1, locations_2 = order_lists(locations_1, locations_2)
     distances = calculate_distance_apart(locations_1, locations_2)
